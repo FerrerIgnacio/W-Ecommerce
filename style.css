@@ -1,0 +1,382 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    background-color: rgba(0, 0, 0, 0.425);
+    height: 100vh;
+    width: auto;
+    display:grid;
+    grid-template-columns: 10% repeat(4,1fr);
+    grid-template-rows: 10% repeat(4,1fr);
+    grid-template-areas:
+    "izq arriba arriba arriba arriba"
+    "izq f1 f1 f1 g1"
+    "izq f1 f1 f1 g2"
+    "izq g3 g4 g5 g6"
+    "izq pie pie pie pie";
+}
+
+.iconos-arriba{
+    background-color: cadetblue;
+    grid-area: arriba;
+}
+
+.iconos-izquierda{
+    background-color:hotpink;
+    grid-area: izq;
+}
+
+.material-symbols-outlined{
+    font-size: 30px;
+}
+.foto-mujer-principal{
+    background-color: antiquewhite;
+    grid-area: f1;
+}
+
+.g1{
+    grid-area: g1;
+    background-image: url(/fotos/flores.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.g2{
+    background-color: blue;
+    grid-area: g2;
+}
+
+.g3{
+    background-color: aqua;
+    grid-area: g3;
+}
+
+.g4{
+    background-color: rgb(255, 0, 98);
+    grid-area: g4;
+}
+
+.g5{
+    background-color: lightblue;
+    grid-area: g5;
+}
+
+.g6{
+    background-color: gold;
+    grid-area: g6;
+}
+
+.footer{
+    background-color: aliceblue;
+    grid-area: pie;
+}
+
+@media only screen and (max-width: 575px){
+ 
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        background-color: #d5cabd;
+    }
+
+    .foto-mujer-principal,
+    .g1{
+        display: none;
+    }
+
+    .iconos-arriba,
+    .iconos-izquierda{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        margin: 5px;
+        background-color: #ffffff;
+    }
+
+    .g2,
+    .g3,
+    .g4,
+    .g5,
+    .g6{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-block-start: 15px;
+        margin-bottom: 15px;
+        width: 300px;
+        height: 260px;
+        background: rgb(236, 236, 236);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+
+    img{
+        width: 20%;
+        height: auto;
+    }
+
+    
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 10px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .contenedor{
+        height: 100vh;
+        width: auto;
+        display:grid;
+        grid-template-columns: 10% repeat(4,1fr);
+        grid-template-rows: 10% repeat(4,1fr);
+        grid-template-areas:
+        "izq arriba arriba arriba arriba"
+        "izq f1 f1 f1 g1"
+        "izq f1 f1 f1 g2"
+        "izq g3 g4 g5 g6"
+        "izq pie pie pie pie";
+    }
+
+    .iconos-izquierda{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: #fef7ff;
+    }
+
+    .iconos-arriba{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #d5cabd;
+    }
+
+    .foto-mujer-principal{
+        width: 100%;
+        height: 100%;    
+    }
+
+    .g1,
+    .g2,
+    .g3,
+    .g4,
+    .g5,
+    .g6{
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+       padding: 15px;
+       background: rgb(236, 236, 236);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }     
+    
+    button{
+        width: 130px;
+        height: 40px;
+        color: #000000;
+        border-radius: 15px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: flex;
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+            7px 7px 20px 0px rgba(0,0,0,.1),
+            4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 10px;
+        background-color: #d5cabd;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1199px){
+    .contenedor{
+        height: 100vh;
+        width: auto;
+        display:grid;
+        grid-template-columns: 10% repeat(4,1fr);
+        grid-template-rows: 10% repeat(4,1fr);
+        grid-template-areas:
+        "izq arriba arriba arriba arriba"
+        "izq f1 f1 f1 g1"
+        "izq f1 f1 f1 g2"
+        "izq g3 g4 g5 g6"
+        "izq pie pie pie pie";
+    }
+
+    .iconos-izquierda{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: #fef7ff;
+    }
+
+    .iconos-arriba{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #d5cabd;
+    }
+
+    .foto-mujer-principal{
+        width: 100%;
+        height: 100%;    
+    }
+
+    .g1,
+    .g2,
+    .g3,
+    .g4,
+    .g5,
+    .g6{
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+       padding: 15px;
+       background: rgb(236, 236, 236);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }     
+    
+    button{
+        width: 130px;
+        height: 40px;
+        color: #000000;
+        border-radius: 15px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: flex;
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+            7px 7px 20px 0px rgba(0,0,0,.1),
+            4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 10px;
+        background-color: #d5cabd;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .contenedor{
+        height: 100vh;
+        width: auto;
+        display:grid;
+        grid-template-columns: 10% repeat(4,1fr);
+        grid-template-rows: 10% repeat(4,1fr);
+        grid-template-areas:
+        "izq arriba arriba arriba arriba"
+        "izq f1 f1 f1 g1"
+        "izq f1 f1 f1 g2"
+        "izq g3 g4 g5 g6"
+        "izq pie pie pie pie";
+    }
+
+    .iconos-izquierda{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: #fef7ff;
+        padding: 70px;
+    }
+
+    .iconos-arriba{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #d5cabd;
+        padding: 50px;
+    }
+
+    .foto-mujer-principal{
+       margin: 0 auto;
+       width: 100%;
+       height: 100%;
+    }
+
+    .g1,
+    .g2,
+    .g3,
+    .g4,
+    .g5,
+    .g6{
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+       padding: 15px;
+       background: rgb(236, 236, 236);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        font-size: 1em;
+    }     
+    
+    button{
+        width: 130px;
+        height: 40px;
+        color: #000000;
+        border-radius: 15px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+            7px 7px 20px 0px rgba(0,0,0,.1),
+            4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 10px;
+        background-color: #d5cabd;
+    }
+}
